@@ -23,6 +23,7 @@ a {
     color: #000;
     text-decoration: none;
 }
+
 .container {
   max-width: 1160px;
   padding: 0 40px;
@@ -73,18 +74,7 @@ header > .container {
 }
 
 /*TOP*/
-.area_top_view {
-    animation: fadeIn 2.0s ease 0.3s 1 normal;
-    background: url(img/touka.png) no-repeat bottom center;
-    background-size:cover;
-}
-@keyframes fadeIn { /*animetion-nameで設定した値を書く*/
 
-    0% {opacity: 0} /*アニメーション開始時は不透明度0%*/
-  
-    100% {opacity: 1} /*アニメーション終了時は不透明度100%*/
-  
-}
 .area_top_view > .container {
     height: 1080px;
     width: auto;
@@ -112,6 +102,7 @@ header > .container {
     flex-wrap: wrap;
     align-items: center;
     margin: 0 -40px;
+    grid-template-columns: repeat(auto-fit, 10em);
 }
 .layout_2_div > div {
     width: 50%;
@@ -188,4 +179,30 @@ footer > .container {
 .copyright {
     font: 300 14px/1em 'futura PT','noto sans japanese',sans-serif;
     margin: 30px 0 0;
+}
+
+.title-cover {
+    animation: fadeIn 2.0s ease 0.3s 1 normal;
+    height: 100vh;
+    background: url(img/touka.png) no-repeat center;
+    background-size: 75%;
+}
+@keyframes fadeIn { /*animetion-nameで設定した値を書く*/
+
+    0% {opacity: 0} /*アニメーション開始時は不透明度0%*/
+  
+    100% {opacity: 1} /*アニメーション終了時は不透明度100%*/
+  
+}
+
+@media screen and (max-width:800px) {
+  iframe {
+    display: none;
+  }
+  .layout_2_div {
+    height: 60vh;
+  }
+  .layout_2_div > div {
+    width: 100%;
+  }
 }
