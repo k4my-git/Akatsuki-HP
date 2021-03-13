@@ -1,0 +1,191 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+.container {
+  max-width: 1160px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+/*header*/
+header {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+header > .container {
+    display: flex;
+    align-items: center;
+}
+
+/* ロゴ */
+.area_logo_header .logo {
+    display: block;
+}
+.area_logo_header img {
+    height: 60px;
+    vertical-align: bottom;
+}
+/*
+.area_logo_header img {
+    height: 60px;
+    vertical-align: bottom;
+}
+*/
+.nav_header {
+    margin: 0 0 0 auto;
+}
+.list_nav_header {
+    display: flex;
+    align-items: center;
+    margin: 0 -15px;
+}
+.list_nav_header > li {
+    padding: 0 15px;
+}
+.list_nav_header a {
+    color: #000;
+    font: 500 18px/1em;
+}
+
+/*TOP*/
+.area_top_view {
+    animation: fadeIn 2.0s ease 0.3s 1 normal;
+    background: url(img/touka.png) no-repeat bottom center;
+    background-size:cover;
+}
+@keyframes fadeIn { /*animetion-nameで設定した値を書く*/
+
+    0% {opacity: 0} /*アニメーション開始時は不透明度0%*/
+  
+    100% {opacity: 1} /*アニメーション終了時は不透明度100%*/
+  
+}
+.area_top_view > .container {
+    height: 1080px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+[class*="area_home"] {
+    padding: 80px 0;
+}
+
+.head_home {
+    display: flex;
+    justify-content: center;
+}
+.head_home .ttl {
+    font: 400 56px/1em;
+    position: relative;
+}
+
+.layout_2_div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 -40px;
+}
+.layout_2_div > div {
+    width: 50%;
+    padding: 0 40px;
+}
+
+.text_home .ttl {
+    font: 500 32px/1em 'futura PT','noto sans japanese',sans-serif;
+    margin: 0 0 20px;
+}
+.text_home .description {
+    font: 300 20px/1.8em 'futura PT','noto sans japanese',sans-serif;
+}
+.text_home .btnarea {
+    margin: 30px 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.btn-social-long-discord {
+    color: #FFF;/*文字・アイコン色*/
+    border-radius: 7px;/*角丸に*/
+    display: inline-block;
+    height: 50px;/*高さ*/
+    width: 190px;/*幅*/
+    text-align: center;/*中身を中央寄せ*/
+    font-size: 25px;/*文字のサイズ*/
+    line-height: 50px;/*高さと合わせる*/
+    background: #7289DA;
+    overflow: hidden;/*はみ出た部分を隠す*/
+    text-decoration:none;/*下線は消す*/
+}
+  
+.btn-social-long-discord .fab fa-discord {
+    text-shadow: 2px 2px 0px #7289DA;
+    font-size: 30px;
+}
+  
+.btn-social-long-discord span {
+    display:inline-block;
+    transition: .5s;
+}
+  
+.btn-social-long-discord:hover span {
+    -webkit-transform: rotateX(360deg);
+    transform: rotateX(360deg);
+}
+
+footer > .container {
+    padding: 0 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list_sns {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 -10px;
+}
+.list_sns > li {
+    padding: 0 10px;
+}
+.list_sns a {
+    color: #000;
+    font-size: 30px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+.copyright {
+    font: 300 14px/1em 'futura PT','noto sans japanese',sans-serif;
+    margin: 30px 0 0;
+}
